@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="10032"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchkitExperiment_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="136" alignment="left" textAlignment="center" id="vm2-f0-k22"/>
+                        <button width="1" alignment="left" title="Zeigs mir" id="qOk-ad-XNR">
+                            <connections>
+                                <action selector="buttonTap" destination="AgC-eL-Hgc" id="Nmj-e4-Ugc"/>
+                                <segue destination="zKO-Ex-ZfF" kind="push" id="ljs-TO-w2e"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="buttonTapped" destination="qOk-ad-XNR" id="6Im-ot-P3c"/>
+                        <outlet property="outPutLabel" destination="vm2-f0-k22" id="hsd-uJ-Utg"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="70" y="261"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="WatchkitExperiment_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+        <!--Name Interface Controller-->
+        <scene sceneID="Gu2-VW-yfe">
+            <objects>
+                <controller id="zKO-Ex-ZfF" customClass="NameInterfaceController" customModule="WatchkitExperiment_WatchKit_Extension">
+                    <items>
+                        <label width="136" alignment="left" textAlignment="center" id="pgs-cf-juC"/>
+                        <table alignment="left" id="I5e-Se-4Bu">
+                            <items>
+                                <tableRow id="1IV-hf-3hN" customClass="NameTableRow" customModule="WatchkitExperiment_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="vve-ex-F8M">
+                                        <items>
+                                            <label width="136" height="42.5" alignment="left" text="11111" id="tFI-ZS-waD"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowLabel" destination="tFI-ZS-waD" id="dgH-MO-rPs"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                            <color key="backgroundColor" red="0.83709591630000002" green="0.27881070629999999" blue="0.26981203349999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="outPutLabel" destination="pgs-cf-juC" id="NWa-vv-aTd"/>
+                        <outlet property="table" destination="I5e-Se-4Bu" id="Maa-E9-pfc"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="442" y="169"/>
+        </scene>
+    </scenes>
+</document>
