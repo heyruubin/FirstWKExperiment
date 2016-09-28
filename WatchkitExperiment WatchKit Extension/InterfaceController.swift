@@ -12,16 +12,8 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
-    @IBOutlet var buttonTapped: WKInterfaceButton!
-    
-    @IBOutlet var outPutLabel: WKInterfaceLabel!
-    @IBAction func buttonTap() {
-        outPutLabel.setText("Hallo! Erste Watch App!!!!")
-    }
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        
-        t
         // Configure interface objects here.
     }
 

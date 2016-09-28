@@ -16,10 +16,20 @@ class NameInterfaceController: WKInterfaceController {
     
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
-        let dummyData = ["Ruben", "Max", "Daniel", "Dominik"]
-        // Configure interface objects here.
+        
     }
-
+    override init() {
+        super.init()
+        self.loadTable()
+    }
+    func loadTable (){
+        let dummyData = ["Ruben", "Max", "Daniel", "Dominik"]
+        table.setNumberOfRows(dummyData.count, withRowType: "MyRowController")
+        for (index, text) in dummyData.enumerate(){
+            let row = table.rowControllerAtIndex(index) as! NameTableRow
+            row.rowLabel.setText(text)
+        }
+    }
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()

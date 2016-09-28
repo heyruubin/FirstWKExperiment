@@ -10,18 +10,12 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchkitExperiment_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label width="136" alignment="left" textAlignment="center" id="vm2-f0-k22"/>
                         <button width="1" alignment="left" title="Zeigs mir" id="qOk-ad-XNR">
                             <connections>
-                                <action selector="buttonTap" destination="AgC-eL-Hgc" id="Nmj-e4-Ugc"/>
                                 <segue destination="zKO-Ex-ZfF" kind="push" id="ljs-TO-w2e"/>
                             </connections>
                         </button>
                     </items>
-                    <connections>
-                        <outlet property="buttonTapped" destination="qOk-ad-XNR" id="6Im-ot-P3c"/>
-                        <outlet property="outPutLabel" destination="vm2-f0-k22" id="hsd-uJ-Utg"/>
-                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="70" y="261"/>
@@ -57,7 +51,7 @@
                         <label width="136" alignment="left" textAlignment="center" id="pgs-cf-juC"/>
                         <table alignment="left" id="I5e-Se-4Bu">
                             <items>
-                                <tableRow id="1IV-hf-3hN" customClass="NameTableRow" customModule="WatchkitExperiment_WatchKit_Extension">
+                                <tableRow identifier="MyRowController" id="1IV-hf-3hN" customClass="NameTableRow" customModule="WatchkitExperiment_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="vve-ex-F8M">
                                         <items>
                                             <label width="136" height="42.5" alignment="left" text="11111" id="tFI-ZS-waD"/>
